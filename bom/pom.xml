@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>net.runeduniverse</groupId>
+		<artifactId>hexsocket-parent</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<groupId>net.runeduniverse.hexsocket</groupId>
+	<artifactId>hexsocket-bom</artifactId>
+	<packaging>pom</packaging>
+	<name>HexSocket - Bill of Materials</name>
+
+	<properties>
+		<hexsocket-api-version>1.0.0</hexsocket-api-version>
+		<hexsocket-module-core-version>1.0.0</hexsocket-module-core-version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- HexSocket - API -->
+			<dependency>
+				<groupId>net.runeduniverse.hexsocket</groupId>
+				<artifactId>api</artifactId>
+				<version>${hexsocket-api-version}</version>
+				<type>lib</type>
+			</dependency>
+			<!-- HexSocket - Module - Core -->
+			<dependency>
+				<groupId>net.runeduniverse.hexsocket.modules</groupId>
+				<artifactId>core</artifactId>
+				<version>${hexsocket-module-core-version}</version>
+				<type>hexsocket-module</type>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>net.runeduniverse.tools.maven.r4m</groupId>
+				<artifactId>r4m-maven-extension</artifactId>
+				<extensions>true</extensions>
+			</plugin>
+		</plugins>
+	</build>
+</project>
