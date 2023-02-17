@@ -1,0 +1,145 @@
+<project-execution-model
+	xmlns="https://api.runeduniverse.net/runes4tools/r4m-pem"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://api.runeduniverse.net/runes4tools/r4m-pem 
+	https://api.runeduniverse.net/runes4tools/r4m-pem-v1.xsd">
+
+	<modelVersion>1.0.0</modelVersion>
+	<executions>
+
+		<!-- generic -->
+		<execution source="override" id="default">
+			<triggers>
+				<default />
+				<packaging-procedure>pom</packaging-procedure>
+				<packaging-procedure>lib</packaging-procedure>
+				<packaging-procedure>hexsocket-module</packaging-procedure>
+				<packaging-procedure>hexsocket-app</packaging-procedure>
+			</triggers>
+			<lifecycles>
+				<lifecycle id="clean">
+					<phases>
+						<phase id="clean">
+							<goals>
+								<goal id="clean">
+									<groupId>org.apache.maven.plugins</groupId>
+									<artifactId>maven-clean-plugin</artifactId>
+									<modes>
+										<default />
+										<dev />
+									</modes>
+								</goal>
+							</goals>
+						</phase>
+					</phases>
+				</lifecycle>
+				<lifecycle id="default">
+					<phases>
+						<phase id="install">
+							<goals>
+								<goal id="install">
+									<groupId>org.apache.maven.plugins</groupId>
+									<artifactId>maven-install-plugin</artifactId>
+									<modes>
+										<default />
+										<dev />
+									</modes>
+								</goal>
+							</goals>
+						</phase>
+						<phase id="deploy">
+							<goals>
+								<goal id="deploy">
+									<groupId>org.apache.maven.plugins</groupId>
+									<artifactId>maven-deploy-plugin</artifactId>
+									<modes>
+										<default />
+									</modes>
+								</goal>
+							</goals>
+						</phase>
+					</phases>
+				</lifecycle>
+			</lifecycles>
+		</execution>
+
+		<!-- packaging: lib -->
+		<execution source="override" id="default">
+			<triggers>
+				<default />
+				<packaging-procedure>lib</packaging-procedure>
+			</triggers>
+			<lifecycles>
+				<lifecycle id="default">
+					<phases>
+						<phase id="compile">
+							<goals>
+								<goal id="compiler-summary">
+									<groupId>net.runeduniverse.tools.maven.compiler</groupId>
+									<artifactId>compiler-maven-extension</artifactId>
+									<modes>
+										<default />
+										<dev />
+									</modes>
+									<fork>
+										<executions>
+											<execution id="default" />
+										</executions>
+										<lifecycle id="compiler" />
+									</fork>
+								</goal>
+							</goals>
+						</phase>
+						<phase id="test-compile">
+							<goals>
+								<goal id="compiler-summary">
+									<groupId>net.runeduniverse.tools.maven.compiler</groupId>
+									<artifactId>compiler-maven-extension</artifactId>
+									<modes>
+										<default />
+										<dev />
+									</modes>
+									<fork>
+										<executions>
+											<execution id="test" />
+										</executions>
+										<lifecycle id="compiler" />
+									</fork>
+								</goal>
+							</goals>
+						</phase>
+					</phases>
+				</lifecycle>
+				<lifecycle id="compiler">
+					<phases>
+						<phase id="scan-references">
+							<goals>
+								<goal id="compiler-scan-references">
+									<modes>
+										<default />
+										<dev />
+									</modes>
+									<groupId>net.runeduniverse.tools.maven.compiler</groupId>
+									<artifactId>compiler-maven-extension</artifactId>
+								</goal>
+							</goals>
+						</phase>
+						<phase id="scan-references">
+							<goals>
+								<goal id="compiler-scan-test-references">
+									<modes>
+										<default />
+										<dev />
+									</modes>
+									<groupId>net.runeduniverse.tools.maven.compiler</groupId>
+									<artifactId>compiler-maven-extension</artifactId>
+								</goal>
+							</goals>
+						</phase>
+					</phases>
+				</lifecycle>
+			</lifecycles>
+		</execution>
+
+	</executions>
+</project-execution-model>
