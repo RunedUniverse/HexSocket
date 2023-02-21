@@ -2,9 +2,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>net.runeduniverse</groupId>
+		<groupId>net.runeduniverse.hexsocket</groupId>
 		<artifactId>hexsocket-parent</artifactId>
 		<version>1.0.0</version>
+		<relativePath>../..</relativePath>
 	</parent>
 
 	<groupId>net.runeduniverse.hexsocket.modules</groupId>
@@ -15,7 +16,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>net.runeduniverse.hexsocket</groupId>
-			<artifactId>api</artifactId>
+			<artifactId>hexsocket-api</artifactId>
 			<version>1.0.0</version>
 			<type>lib</type>
 			<scope>compile</scope>

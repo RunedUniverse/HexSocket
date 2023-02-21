@@ -2,12 +2,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>net.runeduniverse</groupId>
+		<groupId>net.runeduniverse.hexsocket</groupId>
 		<artifactId>hexsocket-parent</artifactId>
 		<version>1.0.0</version>
 	</parent>
 
-	<groupId>net.runeduniverse.hexsocket</groupId>
 	<artifactId>hexsocket-bom</artifactId>
 	<packaging>pom</packaging>
 	<name>HexSocket - Bill of Materials</name>
