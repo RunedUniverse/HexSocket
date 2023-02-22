@@ -33,11 +33,6 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-install-plugin</artifactId>
-				<version>2.4</version>
-			</plugin>
-			<plugin>
 				<groupId>net.runeduniverse.tools.maven.r4m</groupId>
 				<artifactId>r4m-maven-extension</artifactId>
 				<extensions>true</extensions>
@@ -51,6 +46,11 @@
 				<groupId>net.runeduniverse.tools.maven.native</groupId>
 				<artifactId>native-maven-extension</artifactId>
 				<extensions>true</extensions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-install-plugin</artifactId>
+				<version>2.4</version>
 			</plugin>
 			<!-- 
 			<plugin>
