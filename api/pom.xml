@@ -33,11 +33,6 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>net.runeduniverse.tools.maven.r4m</groupId>
-				<artifactId>r4m-maven-extension</artifactId>
-				<extensions>true</extensions>
-			</plugin>
-			<plugin>
 				<groupId>net.runeduniverse.tools.maven.compiler</groupId>
 				<artifactId>compiler-maven-extension</artifactId>
 				<extensions>true</extensions>

@@ -21,22 +21,8 @@
 		</profile>
 	</profiles>
 	<build>
-		<plugins>
-			<plugin>
-				<groupId>net.runeduniverse.tools.maven.r4m</groupId>
-				<artifactId>r4m-maven-extension</artifactId>
-				<extensions>true</extensions>
-			</plugin>
-		</plugins>
 		<pluginManagement>
 			<plugins>
-				<plugin>
-					<groupId>net.runeduniverse.tools.maven.r4m</groupId>
-					<artifactId>r4m-maven-extension</artifactId>
-					<version>0.0.0</version>
-					<inherited>true</inherited>
-					<extensions>true</extensions>
-				</plugin>
 				<plugin>
 					<groupId>net.runeduniverse.tools.maven.compiler</groupId>
 					<artifactId>compiler-maven-extension</artifactId>

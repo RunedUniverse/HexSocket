@@ -38,11 +38,6 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>net.runeduniverse.tools.maven.r4m</groupId>
-				<artifactId>r4m-maven-extension</artifactId>
-				<extensions>true</extensions>
-			</plugin>
-			<plugin>
 				<groupId>net.runeduniverse.tools.maven.hexsocket</groupId>
 				<artifactId>hexsocket-maven-extension</artifactId>
 				<extensions>true</extensions>
