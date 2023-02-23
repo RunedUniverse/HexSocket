@@ -7,4 +7,19 @@
 		<artifactId>r4m-maven-extension</artifactId>
 		<version>0.0.0</version>
 	</extension>
+	<extension>
+		<groupId>net.runeduniverse.tools.maven.native</groupId>
+		<artifactId>native-maven-extension</artifactId>
+		<version>0.0.0</version>
+	</extension>
+	<extension>
+		<groupId>net.runeduniverse.tools.maven.compiler</groupId>
+		<artifactId>compiler-maven-extension</artifactId>
+		<version>0.0.0</version>
+	</extension>
+	<extension>
+		<groupId>net.runeduniverse.tools.maven.hexsocket</groupId>
+		<artifactId>hexsocket-maven-extension</artifactId>
+		<version>0.0.0</version>
+	</extension>
 </extensions>

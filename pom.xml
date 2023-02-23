@@ -24,27 +24,6 @@
 		<pluginManagement>
 			<plugins>
 				<plugin>
-					<groupId>net.runeduniverse.tools.maven.compiler</groupId>
-					<artifactId>compiler-maven-extension</artifactId>
-					<version>0.0.0</version>
-					<inherited>true</inherited>
-					<extensions>true</extensions>
-				</plugin>
-				<plugin>
-					<groupId>net.runeduniverse.tools.maven.native</groupId>
-					<artifactId>native-maven-extension</artifactId>
-					<version>0.0.0</version>
-					<inherited>true</inherited>
-					<extensions>true</extensions>
-				</plugin>
-				<plugin>
-					<groupId>net.runeduniverse.tools.maven.hexsocket</groupId>
-					<artifactId>hexsocket-maven-extension</artifactId>
-					<version>0.0.0</version>
-					<inherited>true</inherited>
-					<extensions>true</extensions>
-				</plugin>
-				<plugin>
 					<groupId>net.runeduniverse.tools.maven.cpp2gcc</groupId>
 					<artifactId>cpp2gcc-maven-plugin</artifactId>
 					<version>0.0.1</version>

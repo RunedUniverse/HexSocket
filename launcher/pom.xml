@@ -31,14 +31,4 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>net.runeduniverse.tools.maven.hexsocket</groupId>
-				<artifactId>hexsocket-maven-extension</artifactId>
-				<extensions>true</extensions>
-			</plugin>
-		</plugins>
-	</build>
 </project>

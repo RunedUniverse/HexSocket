@@ -33,16 +33,6 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>net.runeduniverse.tools.maven.compiler</groupId>
-				<artifactId>compiler-maven-extension</artifactId>
-				<extensions>true</extensions>
-			</plugin>
-			<plugin>
-				<groupId>net.runeduniverse.tools.maven.native</groupId>
-				<artifactId>native-maven-extension</artifactId>
-				<extensions>true</extensions>
-			</plugin>
-			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-install-plugin</artifactId>
 				<version>2.4</version>
