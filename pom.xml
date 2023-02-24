@@ -23,12 +23,12 @@
 	<build>
 		<pluginManagement>
 			<plugins>
-				<plugin>
-					<groupId>net.runeduniverse.tools.maven.cpp2gcc</groupId>
-					<artifactId>cpp2gcc-maven-plugin</artifactId>
-					<version>0.0.1</version>
-					<inherited>true</inherited>
-				</plugin>
+				<!--<plugin> -->
+				<!--<groupId>net.runeduniverse.tools.maven.cpp2gcc</groupId> -->
+				<!--<artifactId>cpp2gcc-maven-plugin</artifactId> -->
+				<!--<version>0.0.1</version> -->
+				<!--<inherited>true</inherited> -->
+				<!--</plugin> -->
 			</plugins>
 		</pluginManagement>
 	</build>
