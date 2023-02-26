@@ -1,0 +1,601 @@
+[WARNING]   ProjectExecutionModel
+   ├ Execution
+   │  ├ [ID]        » default
+   │  ├ [SOURCE]    » packaging
+   │  ├ [INHERITED] » true
+   │  ├ Restrictions
+   │  │  └ [PACKAGING-PROCEDURE] » lib
+   │  ├ Trigger
+   │  │  └ [DEFAULT-ACTIVE] » true
+   │  └ Lifecycle
+   │     ├ [ID] » default
+   │     ├ Phase
+   │     │  ├ [ID] » compile
+   │     │  └ Goal
+   │     │     ├ [GROUPID]    » net.runeduniverse.tools.maven.compiler
+   │     │     ├ [ARTIFACTID] » compiler-maven-extension
+   │     │     ├ [GOALID]     » compiler-summary
+   │     │     ├ [MODES]      » [default, dev]
+   │     │     └ Fork
+   │     │        ├ [MODE]       » inherited
+   │     │        ├ [EXECUTIONS] » [default]
+   │     │        └ Target Lifecycle
+   │     │           └ [ID] » compiler
+   │     └ Phase
+   │        ├ [ID] » test-compile
+   │        └ Goal
+   │           ├ [GROUPID]    » net.runeduniverse.tools.maven.compiler
+   │           ├ [ARTIFACTID] » compiler-maven-extension
+   │           ├ [GOALID]     » compiler-summary
+   │           ├ [MODES]      » [default, dev]
+   │           └ Fork
+   │              ├ [MODE]       » inherited
+   │              ├ [EXECUTIONS] » [test]
+   │              └ Target Lifecycle
+   │                 └ [ID] » compiler
+   ├ Execution
+   │  ├ [ID]        » default
+   │  ├ [SOURCE]    » plugin
+   │  ├ [INHERITED] » true
+   │  ├ Restrictions
+   │  │  └ [PACKAGING-PROCEDURE] » lib
+   │  ├ Trigger
+   │  │  └ [DEFAULT-ACTIVE] » true
+   │  └ Lifecycle
+   │     ├ [ID] » compiler
+   │     └ Phase
+   │        ├ [ID] » scan-references
+   │        └ Goal
+   │           ├ [GROUPID]    » net.runeduniverse.tools.maven.compiler
+   │           ├ [ARTIFACTID] » compiler-maven-extension
+   │           ├ [GOALID]     » scan-references
+   │           └ [MODES]      » [default, dev]
+   ├ Execution
+   │  ├ [ID]        » test
+   │  ├ [SOURCE]    » plugin
+   │  ├ [INHERITED] » true
+   │  ├ Restrictions
+   │  │  └ [PACKAGING-PROCEDURE] » lib
+   │  └ Lifecycle
+   │     ├ [ID] » compiler
+   │     └ Phase
+   │        ├ [ID] » scan-references
+   │        └ Goal
+   │           ├ [GROUPID]    » net.runeduniverse.tools.maven.compiler
+   │           ├ [ARTIFACTID] » compiler-maven-extension
+   │           ├ [GOALID]     » scan-references
+   │           └ [MODES]      » [default, dev]
+   ├ Execution
+   │  ├ [ID]        » default-clean
+   │  ├ [SOURCE]    » override
+   │  ├ [INHERITED] » false
+   │  ├ Trigger
+   │  │  └ [DEFAULT-ACTIVE] » true
+   │  └ Lifecycle
+   │     ├ [ID] » clean
+   │     └ Phase
+   │        ├ [ID] » clean
+   │        └ Goal
+   │           ├ [GROUPID]    » org.apache.maven.plugins
+   │           ├ [ARTIFACTID] » maven-clean-plugin
+   │           ├ [GOALID]     » clean
+   │           └ [MODES]      » []
+   ├ Execution
+   │  ├ [ID]        » default-clean
+   │  ├ [SOURCE]    » packaging
+   │  ├ [INHERITED] » true
+   │  ├ Restrictions
+   │  │  ├ [PACKAGING-PROCEDURE] » lib
+   │  │  ├ [PACKAGING-PROCEDURE] » maven-plugin
+   │  │  ├ [PACKAGING-PROCEDURE] » hexsocket-app
+   │  │  ├ [PACKAGING-PROCEDURE] » hexsocket-module
+   │  │  ├ [PACKAGING-PROCEDURE] » rar
+   │  │  ├ [PACKAGING-PROCEDURE] » ejb
+   │  │  ├ [PACKAGING-PROCEDURE] » ear
+   │  │  ├ [PACKAGING-PROCEDURE] » jar
+   │  │  ├ [PACKAGING-PROCEDURE] » app
+   │  │  ├ [PACKAGING-PROCEDURE] » war
+   │  │  └ [PACKAGING-PROCEDURE] » pom
+   │  ├ Trigger
+   │  │  └ [DEFAULT-ACTIVE] » true
+   │  └ Lifecycle
+   │     ├ [ID] » clean
+   │     └ Phase
+   │        ├ [ID] » clean
+   │        └ Goal
+   │           ├ [GROUPID]    » org.apache.maven.plugins
+   │           ├ [ARTIFACTID] » maven-clean-plugin
+   │           ├ [GOALID]     » clean
+   │           └ [MODES]      » [default, dev]
+   ├ Execution
+   │  ├ [ID]        » default-install
+   │  ├ [SOURCE]    » override
+   │  ├ [INHERITED] » false
+   │  ├ Trigger
+   │  │  └ [DEFAULT-ACTIVE] » true
+   │  └ Lifecycle
+   │     ├ [ID] » default
+   │     └ Phase
+   │        ├ [ID] » install
+   │        └ Goal
+   │           ├ [GROUPID]    » org.apache.maven.plugins
+   │           ├ [ARTIFACTID] » maven-install-plugin
+   │           ├ [GOALID]     » install
+   │           └ [MODES]      » []
+   ├ Execution
+   │  ├ [ID]        » default-install
+   │  ├ [SOURCE]    » packaging
+   │  ├ [INHERITED] » true
+   │  ├ Restrictions
+   │  │  ├ [PACKAGING-PROCEDURE] » ejb
+   │  │  ├ [PACKAGING-PROCEDURE] » pom
+   │  │  ├ [PACKAGING-PROCEDURE] » maven-plugin
+   │  │  ├ [PACKAGING-PROCEDURE] » ear
+   │  │  ├ [PACKAGING-PROCEDURE] » lib
+   │  │  ├ [PACKAGING-PROCEDURE] » hexsocket-app
+   │  │  ├ [PACKAGING-PROCEDURE] » hexsocket-module
+   │  │  ├ [PACKAGING-PROCEDURE] » rar
+   │  │  ├ [PACKAGING-PROCEDURE] » jar
+   │  │  └ [PACKAGING-PROCEDURE] » war
+   │  ├ Trigger
+   │  │  └ [DEFAULT-ACTIVE] » true
+   │  └ Lifecycle
+   │     ├ [ID] » default
+   │     └ Phase
+   │        ├ [ID] » install
+   │        └ Goal
+   │           ├ [GROUPID]    » org.apache.maven.plugins
+   │           ├ [ARTIFACTID] » maven-install-plugin
+   │           ├ [GOALID]     » install
+   │           └ [MODES]      » [default, dev]
+   ├ Execution
+   │  ├ [ID]        » default-deploy
+   │  ├ [SOURCE]    » override
+   │  ├ [INHERITED] » false
+   │  ├ Trigger
+   │  │  └ [DEFAULT-ACTIVE] » true
+   │  └ Lifecycle
+   │     ├ [ID] » site
+   │     └ Phase
+   │        ├ [ID] » site-deploy
+   │        └ Goal
+   │           ├ [GROUPID]    » org.apache.maven.plugins
+   │           ├ [ARTIFACTID] » maven-site-plugin
+   │           ├ [GOALID]     » deploy
+   │           └ [MODES]      » []
+   ├ Execution
+   │  ├ [ID]        » default-deploy
+   │  ├ [SOURCE]    » packaging
+   │  ├ [INHERITED] » true
+   │  ├ Restrictions
+   │  │  ├ [PACKAGING-PROCEDURE] » ear
+   │  │  ├ [PACKAGING-PROCEDURE] » ejb
+   │  │  ├ [PACKAGING-PROCEDURE] » lib
+   │  │  ├ [PACKAGING-PROCEDURE] » pom
+   │  │  ├ [PACKAGING-PROCEDURE] » jar
+   │  │  ├ [PACKAGING-PROCEDURE] » rar
+   │  │  ├ [PACKAGING-PROCEDURE] » hexsocket-module
+   │  │  ├ [PACKAGING-PROCEDURE] » war
+   │  │  ├ [PACKAGING-PROCEDURE] » maven-plugin
+   │  │  └ [PACKAGING-PROCEDURE] » hexsocket-app
+   │  ├ Trigger
+   │  │  └ [DEFAULT-ACTIVE] » true
+   │  └ Lifecycle
+   │     ├ [ID] » default
+   │     └ Phase
+   │        ├ [ID] » deploy
+   │        └ Goal
+   │           ├ [GROUPID]    » org.apache.maven.plugins
+   │           ├ [ARTIFACTID] » maven-deploy-plugin
+   │           ├ [GOALID]     » deploy
+   │           └ [MODES]      » [default, dev]
+   ├ Execution
+   │  ├ [ID]        » default-site
+   │  ├ [SOURCE]    » override
+   │  ├ [INHERITED] » false
+   │  ├ Trigger
+   │  │  └ [DEFAULT-ACTIVE] » true
+   │  └ Lifecycle
+   │     ├ [ID] » site
+   │     └ Phase
+   │        ├ [ID] » site
+   │        └ Goal
+   │           ├ [GROUPID]    » org.apache.maven.plugins
+   │           ├ [ARTIFACTID] » maven-site-plugin
+   │           ├ [GOALID]     » site
+   │           └ [MODES]      » []
+   ├ Execution
+   │  ├ [ID]        » default-site
+   │  ├ [SOURCE]    » packaging
+   │  ├ [INHERITED] » true
+   │  ├ Restrictions
+   │  │  ├ [PACKAGING-PROCEDURE] » hexsocket-app
+   │  │  ├ [PACKAGING-PROCEDURE] » rar
+   │  │  ├ [PACKAGING-PROCEDURE] » ejb
+   │  │  ├ [PACKAGING-PROCEDURE] » pom
+   │  │  ├ [PACKAGING-PROCEDURE] » war
+   │  │  ├ [PACKAGING-PROCEDURE] » ear
+   │  │  ├ [PACKAGING-PROCEDURE] » jar
+   │  │  ├ [PACKAGING-PROCEDURE] » lib
+   │  │  ├ [PACKAGING-PROCEDURE] » app
+   │  │  ├ [PACKAGING-PROCEDURE] » hexsocket-module
+   │  │  └ [PACKAGING-PROCEDURE] » maven-plugin
+   │  ├ Trigger
+   │  │  └ [DEFAULT-ACTIVE] » true
+   │  └ Lifecycle
+   │     ├ [ID] » site
+   │     └ Phase
+   │        ├ [ID] » site
+   │        └ Goal
+   │           ├ [GROUPID]    » org.apache.maven.plugins
+   │           ├ [ARTIFACTID] » maven-site-plugin
+   │           ├ [GOALID]     » site
+   │           └ [MODES]      » [default, dev]
+   ├ Execution
+   │  ├ [ID]        » default-site-deploy
+   │  ├ [SOURCE]    » packaging
+   │  ├ [INHERITED] » true
+   │  ├ Restrictions
+   │  │  ├ [PACKAGING-PROCEDURE] » ejb
+   │  │  ├ [PACKAGING-PROCEDURE] » pom
+   │  │  ├ [PACKAGING-PROCEDURE] » lib
+   │  │  ├ [PACKAGING-PROCEDURE] » ear
+   │  │  ├ [PACKAGING-PROCEDURE] » maven-plugin
+   │  │  ├ [PACKAGING-PROCEDURE] » hexsocket-app
+   │  │  ├ [PACKAGING-PROCEDURE] » jar
+   │  │  ├ [PACKAGING-PROCEDURE] » war
+   │  │  ├ [PACKAGING-PROCEDURE] » rar
+   │  │  ├ [PACKAGING-PROCEDURE] » hexsocket-module
+   │  │  └ [PACKAGING-PROCEDURE] » app
+   │  ├ Trigger
+   │  │  └ [DEFAULT-ACTIVE] » true
+   │  └ Lifecycle
+   │     ├ [ID] » site
+   │     └ Phase
+   │        ├ [ID] » site-deploy
+   │        └ Goal
+   │           ├ [GROUPID]    » org.apache.maven.plugins
+   │           ├ [ARTIFACTID] » maven-site-plugin
+   │           ├ [GOALID]     » deploy
+   │           └ [MODES]      » [default, dev]
+   ├ Execution
+   │  ├ [ID]        » default-generate-resources
+   │  ├ [SOURCE]    » packaging
+   │  ├ [INHERITED] » true
+   │  ├ Restrictions
+   │  │  └ [PACKAGING-PROCEDURE] » ear
+   │  ├ Trigger
+   │  │  └ [DEFAULT-ACTIVE] » true
+   │  └ Lifecycle
+   │     ├ [ID] » default
+   │     └ Phase
+   │        ├ [ID] » generate-resources
+   │        └ Goal
+   │           ├ [GROUPID]    » org.apache.maven.plugins
+   │           ├ [ARTIFACTID] » maven-ear-plugin
+   │           ├ [GOALID]     » generate-application-xml
+   │           └ [MODES]      » [default, dev]
+   ├ Execution
+   │  ├ [ID]        » default-package
+   │  ├ [SOURCE]    » packaging
+   │  ├ [INHERITED] » true
+   │  ├ Restrictions
+   │  │  ├ [PACKAGING-PROCEDURE] » maven-plugin
+   │  │  └ [PACKAGING-PROCEDURE] » jar
+   │  ├ Trigger
+   │  │  └ [DEFAULT-ACTIVE] » true
+   │  └ Lifecycle
+   │     ├ [ID] » default
+   │     └ Phase
+   │        ├ [ID] » package
+   │        ├ Goal
+   │        │  ├ [GROUPID]    » org.apache.maven.plugins
+   │        │  ├ [ARTIFACTID] » maven-jar-plugin
+   │        │  ├ [GOALID]     » jar
+   │        │  └ [MODES]      » [default, dev]
+   │        └ Goal
+   │           ├ [GROUPID]    » org.apache.maven.plugins
+   │           ├ [ARTIFACTID] » maven-plugin-plugin
+   │           ├ [GOALID]     » addPluginArtifactMetadata
+   │           └ [MODES]      » [default, dev]
+   ├ Execution
+   │  ├ [ID]        » default-process-resources
+   │  ├ [SOURCE]    » packaging
+   │  ├ [INHERITED] » true
+   │  ├ Restrictions
+   │  │  ├ [PACKAGING-PROCEDURE] » jar
+   │  │  ├ [PACKAGING-PROCEDURE] » maven-plugin
+   │  │  ├ [PACKAGING-PROCEDURE] » ear
+   │  │  ├ [PACKAGING-PROCEDURE] » war
+   │  │  ├ [PACKAGING-PROCEDURE] » rar
+   │  │  └ [PACKAGING-PROCEDURE] » ejb
+   │  ├ Trigger
+   │  │  └ [DEFAULT-ACTIVE] » true
+   │  └ Lifecycle
+   │     ├ [ID] » default
+   │     └ Phase
+   │        ├ [ID] » process-resources
+   │        └ Goal
+   │           ├ [GROUPID]    » org.apache.maven.plugins
+   │           ├ [ARTIFACTID] » maven-resources-plugin
+   │           ├ [GOALID]     » resources
+   │           └ [MODES]      » [default, dev]
+   ├ Execution
+   │  ├ [ID]        » default-process-test-resources
+   │  ├ [SOURCE]    » packaging
+   │  ├ [INHERITED] » true
+   │  ├ Restrictions
+   │  │  ├ [PACKAGING-PROCEDURE] » rar
+   │  │  ├ [PACKAGING-PROCEDURE] » jar
+   │  │  ├ [PACKAGING-PROCEDURE] » maven-plugin
+   │  │  ├ [PACKAGING-PROCEDURE] » war
+   │  │  └ [PACKAGING-PROCEDURE] » ejb
+   │  ├ Trigger
+   │  │  └ [DEFAULT-ACTIVE] » true
+   │  └ Lifecycle
+   │     ├ [ID] » default
+   │     └ Phase
+   │        ├ [ID] » process-test-resources
+   │        └ Goal
+   │           ├ [GROUPID]    » org.apache.maven.plugins
+   │           ├ [ARTIFACTID] » maven-resources-plugin
+   │           ├ [GOALID]     » testResources
+   │           └ [MODES]      » [default, dev]
+   ├ Execution
+   │  ├ [ID]        » default-compile
+   │  ├ [SOURCE]    » packaging
+   │  ├ [INHERITED] » true
+   │  ├ Restrictions
+   │  │  ├ [PACKAGING-PROCEDURE] » ejb
+   │  │  ├ [PACKAGING-PROCEDURE] » jar
+   │  │  ├ [PACKAGING-PROCEDURE] » maven-plugin
+   │  │  ├ [PACKAGING-PROCEDURE] » war
+   │  │  └ [PACKAGING-PROCEDURE] » rar
+   │  ├ Trigger
+   │  │  └ [DEFAULT-ACTIVE] » true
+   │  └ Lifecycle
+   │     ├ [ID] » default
+   │     └ Phase
+   │        ├ [ID] » compile
+   │        └ Goal
+   │           ├ [GROUPID]    » org.apache.maven.plugins
+   │           ├ [ARTIFACTID] » maven-compiler-plugin
+   │           ├ [GOALID]     » compile
+   │           └ [MODES]      » [default, dev]
+   ├ Execution
+   │  ├ [ID]        » default-test
+   │  ├ [SOURCE]    » packaging
+   │  ├ [INHERITED] » true
+   │  ├ Restrictions
+   │  │  ├ [PACKAGING-PROCEDURE] » jar
+   │  │  ├ [PACKAGING-PROCEDURE] » maven-plugin
+   │  │  ├ [PACKAGING-PROCEDURE] » war
+   │  │  ├ [PACKAGING-PROCEDURE] » rar
+   │  │  └ [PACKAGING-PROCEDURE] » ejb
+   │  ├ Trigger
+   │  │  └ [DEFAULT-ACTIVE] » true
+   │  └ Lifecycle
+   │     ├ [ID] » default
+   │     └ Phase
+   │        ├ [ID] » test
+   │        └ Goal
+   │           ├ [GROUPID]    » org.apache.maven.plugins
+   │           ├ [ARTIFACTID] » maven-surefire-plugin
+   │           ├ [GOALID]     » test
+   │           └ [MODES]      » [default, dev]
+   ├ Execution
+   │  ├ [ID]        » default-test-compile
+   │  ├ [SOURCE]    » packaging
+   │  ├ [INHERITED] » true
+   │  ├ Restrictions
+   │  │  ├ [PACKAGING-PROCEDURE] » rar
+   │  │  ├ [PACKAGING-PROCEDURE] » maven-plugin
+   │  │  ├ [PACKAGING-PROCEDURE] » ejb
+   │  │  ├ [PACKAGING-PROCEDURE] » war
+   │  │  └ [PACKAGING-PROCEDURE] » jar
+   │  ├ Trigger
+   │  │  └ [DEFAULT-ACTIVE] » true
+   │  └ Lifecycle
+   │     ├ [ID] » default
+   │     └ Phase
+   │        ├ [ID] » test-compile
+   │        └ Goal
+   │           ├ [GROUPID]    » org.apache.maven.plugins
+   │           ├ [ARTIFACTID] » maven-compiler-plugin
+   │           ├ [GOALID]     » testCompile
+   │           └ [MODES]      » [default, dev]
+   ├ Execution
+   │  ├ [ID]        » default-process-classes
+   │  ├ [SOURCE]    » packaging
+   │  ├ [INHERITED] » true
+   │  ├ Restrictions
+   │  │  └ [PACKAGING-PROCEDURE] » maven-plugin
+   │  ├ Trigger
+   │  │  └ [DEFAULT-ACTIVE] » true
+   │  └ Lifecycle
+   │     ├ [ID] » default
+   │     └ Phase
+   │        ├ [ID] » process-classes
+   │        └ Goal
+   │           ├ [GROUPID]    » org.apache.maven.plugins
+   │           ├ [ARTIFACTID] » maven-plugin-plugin
+   │           ├ [GOALID]     » descriptor
+   │           └ [MODES]      » [default, dev]
+   ├ Execution
+   │  ├ [ID]        » default
+   │  ├ [SOURCE]    » override
+   │  ├ [INHERITED] » true
+   │  ├ Restrictions
+   │  │  └ [PACKAGING-PROCEDURE] » lib
+   │  ├ Trigger
+   │  │  └ [DEFAULT-ACTIVE] » true
+   │  ├ Lifecycle
+   │  │  ├ [ID] » default
+   │  │  ├ Phase
+   │  │  │  ├ [ID] » compile
+   │  │  │  └ Goal
+   │  │  │     ├ [GROUPID]    » net.runeduniverse.tools.maven.compiler
+   │  │  │     ├ [ARTIFACTID] » compiler-maven-extension
+   │  │  │     ├ [GOALID]     » compiler-summary
+   │  │  │     ├ [MODES]      » [default, dev]
+   │  │  │     └ Fork
+   │  │  │        ├ [MODE]       » inherited
+   │  │  │        ├ [EXECUTIONS] » [default]
+   │  │  │        └ Target Lifecycle
+   │  │  │           └ [ID] » compiler
+   │  │  └ Phase
+   │  │     ├ [ID] » test-compile
+   │  │     └ Goal
+   │  │        ├ [GROUPID]    » net.runeduniverse.tools.maven.compiler
+   │  │        ├ [ARTIFACTID] » compiler-maven-extension
+   │  │        ├ [GOALID]     » compiler-summary
+   │  │        ├ [MODES]      » [default, dev]
+   │  │        └ Fork
+   │  │           ├ [MODE]       » inherited
+   │  │           ├ [EXECUTIONS] » [test]
+   │  │           └ Target Lifecycle
+   │  │              └ [ID] » compiler
+   │  └ Lifecycle
+   │     ├ [ID] » compiler
+   │     └ Phase
+   │        ├ [ID] » scan-references
+   │        └ Goal
+   │           ├ [GROUPID]    » net.runeduniverse.tools.maven.compiler
+   │           ├ [ARTIFACTID] » compiler-maven-extension
+   │           ├ [GOALID]     » scan-references
+   │           └ [MODES]      » [default, dev]
+   ├ Execution
+   │  ├ [ID]        » test
+   │  ├ [SOURCE]    » override
+   │  ├ [INHERITED] » true
+   │  ├ Restrictions
+   │  │  └ [PACKAGING-PROCEDURE] » lib
+   │  └ Lifecycle
+   │     ├ [ID] » compiler
+   │     └ Phase
+   │        ├ [ID] » scan-references
+   │        └ Goal
+   │           ├ [GROUPID]    » net.runeduniverse.tools.maven.compiler
+   │           ├ [ARTIFACTID] » compiler-maven-extension
+   │           ├ [GOALID]     » scan-references
+   │           └ [MODES]      » [default, dev]
+   ├ Execution
+   │  ├ [ID]        » default-deploy
+   │  ├ [SOURCE]    » override
+   │  ├ [INHERITED] » false
+   │  ├ Trigger
+   │  │  └ [DEFAULT-ACTIVE] » true
+   │  └ Lifecycle
+   │     ├ [ID] » default
+   │     └ Phase
+   │        ├ [ID] » deploy
+   │        └ Goal
+   │           ├ [GROUPID]    » org.apache.maven.plugins
+   │           ├ [ARTIFACTID] » maven-deploy-plugin
+   │           ├ [GOALID]     » deploy
+   │           └ [MODES]      » []
+   ├ Execution
+   │  ├ [ID]        » default-package
+   │  ├ [SOURCE]    » packaging
+   │  ├ [INHERITED] » true
+   │  ├ Restrictions
+   │  │  └ [PACKAGING-PROCEDURE] » ear
+   │  ├ Trigger
+   │  │  └ [DEFAULT-ACTIVE] » true
+   │  └ Lifecycle
+   │     ├ [ID] » default
+   │     └ Phase
+   │        ├ [ID] » package
+   │        └ Goal
+   │           ├ [GROUPID]    » org.apache.maven.plugins
+   │           ├ [ARTIFACTID] » maven-ear-plugin
+   │           ├ [GOALID]     » ear
+   │           └ [MODES]      » [default, dev]
+   ├ Execution
+   │  ├ [ID]        » default-package
+   │  ├ [SOURCE]    » packaging
+   │  ├ [INHERITED] » true
+   │  ├ Restrictions
+   │  │  └ [PACKAGING-PROCEDURE] » rar
+   │  ├ Trigger
+   │  │  └ [DEFAULT-ACTIVE] » true
+   │  └ Lifecycle
+   │     ├ [ID] » default
+   │     └ Phase
+   │        ├ [ID] » package
+   │        └ Goal
+   │           ├ [GROUPID]    » org.apache.maven.plugins
+   │           ├ [ARTIFACTID] » maven-rar-plugin
+   │           ├ [GOALID]     » rar
+   │           └ [MODES]      » [default, dev]
+   ├ Execution
+   │  ├ [ID]        » default-package
+   │  ├ [SOURCE]    » packaging
+   │  ├ [INHERITED] » true
+   │  ├ Restrictions
+   │  │  └ [PACKAGING-PROCEDURE] » war
+   │  ├ Trigger
+   │  │  └ [DEFAULT-ACTIVE] » true
+   │  └ Lifecycle
+   │     ├ [ID] » default
+   │     └ Phase
+   │        ├ [ID] » package
+   │        └ Goal
+   │           ├ [GROUPID]    » org.apache.maven.plugins
+   │           ├ [ARTIFACTID] » maven-war-plugin
+   │           ├ [GOALID]     » war
+   │           └ [MODES]      » [default, dev]
+   ├ Execution
+   │  ├ [ID]        » default-package
+   │  ├ [SOURCE]    » packaging
+   │  ├ [INHERITED] » true
+   │  ├ Restrictions
+   │  │  └ [PACKAGING-PROCEDURE] » ejb
+   │  ├ Trigger
+   │  │  └ [DEFAULT-ACTIVE] » true
+   │  └ Lifecycle
+   │     ├ [ID] » default
+   │     └ Phase
+   │        ├ [ID] » package
+   │        └ Goal
+   │           ├ [GROUPID]    » org.apache.maven.plugins
+   │           ├ [ARTIFACTID] » maven-ejb-plugin
+   │           ├ [GOALID]     » ejb
+   │           └ [MODES]      » [default, dev]
+   └ Execution
+      ├ [ID]        » default
+      ├ [SOURCE]    » override
+      ├ [INHERITED] » true
+      ├ Restrictions
+      │  ├ [PACKAGING-PROCEDURE] » pom
+      │  ├ [PACKAGING-PROCEDURE] » lib
+      │  ├ [PACKAGING-PROCEDURE] » hexsocket-module
+      │  └ [PACKAGING-PROCEDURE] » hexsocket-app
+      ├ Trigger
+      │  └ [DEFAULT-ACTIVE] » true
+      ├ Lifecycle
+      │  ├ [ID] » clean
+      │  └ Phase
+      │     ├ [ID] » clean
+      │     └ Goal
+      │        ├ [GROUPID]    » org.apache.maven.plugins
+      │        ├ [ARTIFACTID] » maven-clean-plugin
+      │        ├ [GOALID]     » clean
+      │        └ [MODES]      » [default, dev]
+      └ Lifecycle
+         ├ [ID] » default
+         ├ Phase
+         │  ├ [ID] » install
+         │  └ Goal
+         │     ├ [GROUPID]    » org.apache.maven.plugins
+         │     ├ [ARTIFACTID] » maven-install-plugin
+         │     ├ [GOALID]     » install
+         │     └ [MODES]      » [default, dev]
+         └ Phase
+            ├ [ID] » deploy
+            └ Goal
+               ├ [GROUPID]    » org.apache.maven.plugins
+               ├ [ARTIFACTID] » maven-deploy-plugin
+               ├ [GOALID]     » deploy
+               └ [MODES]      » [default]
+
