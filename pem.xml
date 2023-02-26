@@ -2,19 +2,21 @@
 	xmlns="https://api.runeduniverse.net/runes4tools/r4m-pem"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="https://api.runeduniverse.net/runes4tools/r4m-pem 
-	https://api.runeduniverse.net/runes4tools/r4m-pem-v1.xsd">
+	https://api.runeduniverse.net/runes4tools/r4m-pem-v1_0_0.xsd">
 
 	<modelVersion>1.0.0</modelVersion>
 	<executions>
 
 		<!-- generic -->
 		<execution source="override" id="default">
-			<triggers>
-				<default />
+			<restrictions>
 				<packaging-procedure>pom</packaging-procedure>
 				<packaging-procedure>lib</packaging-procedure>
 				<packaging-procedure>hexsocket-module</packaging-procedure>
 				<packaging-procedure>hexsocket-app</packaging-procedure>
+			</restrictions>
+			<triggers>
+				<default />
 			</triggers>
 			<lifecycles>
 				<lifecycle id="clean">
@@ -65,9 +67,11 @@
 
 		<!-- packaging: lib -->
 		<execution source="override" id="default">
+			<restrictions>
+				<packaging-procedure>lib</packaging-procedure>
+			</restrictions>
 			<triggers>
 				<default />
-				<packaging-procedure>lib</packaging-procedure>
 			</triggers>
 			<lifecycles>
 				<lifecycle id="default">
@@ -130,9 +134,9 @@
 		</execution>
 
 		<execution source="override" id="test">
-			<triggers>
+			<restrictions>
 				<packaging-procedure>lib</packaging-procedure>
-			</triggers>
+			</restrictions>
 			<lifecycles>
 				<lifecycle id="compiler">
 					<phases>
