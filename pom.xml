@@ -8,6 +8,11 @@
 
 	<name>HexSocket - Parent</name>
 	<inceptionYear>2022</inceptionYear>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
 	<modules>
 		<module>bom</module>
 		<module>sources</module>
