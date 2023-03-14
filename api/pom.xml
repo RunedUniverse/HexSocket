@@ -37,12 +37,10 @@
 				<artifactId>maven-install-plugin</artifactId>
 				<version>2.4</version>
 			</plugin>
-			<!-- 
 			<plugin>
 				<groupId>net.runeduniverse.tools.maven.cpp2gcc</groupId>
-				<artifactId>cpp2gcc-maven-plugin</artifactId>
+				<artifactId>c2gcc-maven-plugin</artifactId>
 			</plugin>
-			-->
 		</plugins>
 	</build>
 </project>
