@@ -38,7 +38,7 @@
 				<version>2.4</version>
 			</plugin>
 			<plugin>
-				<groupId>net.runeduniverse.tools.maven.cpp2gcc</groupId>
+				<groupId>net.runeduniverse.tools.maven.c2gcc</groupId>
 				<artifactId>c2gcc-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
