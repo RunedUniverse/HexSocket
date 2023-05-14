@@ -44,7 +44,6 @@
 									<artifactId>maven-install-plugin</artifactId>
 									<modes>
 										<default />
-										<dev />
 									</modes>
 								</goal>
 							</goals>

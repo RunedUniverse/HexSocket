@@ -29,8 +29,8 @@
 		<pluginManagement>
 			<plugins>
 				<plugin>
-					<groupId>net.runeduniverse.tools.maven.c2gcc</groupId>
-					<artifactId>c2gcc-maven-plugin</artifactId>
+					<groupId>net.runeduniverse.tools.maven.m2gcc</groupId>
+					<artifactId>m2gcc-maven-plugin</artifactId>
 					<version>0.0.0</version>
 					<inherited>true</inherited>
 				</plugin>

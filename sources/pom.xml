@@ -25,14 +25,4 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>net.runeduniverse.tools.maven.r4m</groupId>
-				<artifactId>r4m-maven-extension</artifactId>
-				<extensions>true</extensions>
-			</plugin>
-		</plugins>
-	</build>
 </project>
