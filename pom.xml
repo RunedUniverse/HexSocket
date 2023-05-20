@@ -11,6 +11,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<r4m.missing-build-plugin-handler.selected>scan</r4m.missing-build-plugin-handler.selected>
 	</properties>
 
 	<modules>
