@@ -11,7 +11,9 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!-- 
 		<r4m.missing-build-plugin-handler>download</r4m.missing-build-plugin-handler>
+		-->
 	</properties>
 
 	<modules>
@@ -30,8 +32,32 @@
 		<pluginManagement>
 			<plugins>
 				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-install-plugin</artifactId>
+					<version>2.4</version>
+					<inherited>true</inherited>
+				</plugin>
+				<plugin>
 					<groupId>net.runeduniverse.tools.maven.m2gcc</groupId>
-					<artifactId>m2gcc-maven-plugin</artifactId>
+					<artifactId>m2gcc-preprocessor-maven-plugin</artifactId>
+					<version>0.0.0</version>
+					<inherited>true</inherited>
+				</plugin>
+				<plugin>
+					<groupId>net.runeduniverse.tools.maven.m2gcc</groupId>
+					<artifactId>m2gcc-compiler-maven-plugin</artifactId>
+					<version>0.0.0</version>
+					<inherited>true</inherited>
+				</plugin>
+				<plugin>
+					<groupId>net.runeduniverse.tools.maven.m2gcc</groupId>
+					<artifactId>m2gcc-assembler-maven-plugin</artifactId>
+					<version>0.0.0</version>
+					<inherited>true</inherited>
+				</plugin>
+				<plugin>
+					<groupId>net.runeduniverse.tools.maven.m2gcc</groupId>
+					<artifactId>m2gcc-linker-maven-plugin</artifactId>
 					<version>0.0.0</version>
 					<inherited>true</inherited>
 				</plugin>
