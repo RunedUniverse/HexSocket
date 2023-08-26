@@ -45,6 +45,9 @@
 					<execution>
 						<id>default</id>
 					</execution>
+					<execution>
+						<id>test</id>
+					</execution>
 				</executions>
 			</plugin>
 			<plugin>
